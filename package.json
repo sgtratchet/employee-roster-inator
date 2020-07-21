@@ -1,0 +1,31 @@
+{
+  "name": "employee-roster-inator",
+  "version": "1.0.0",
+  "description": "A simple application to store employee info",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgtratchet/employee-roster-inator.git"
+  },
+  "keywords": [
+    "roster",
+    "employee"
+  ],
+  "author": "Devin Ellsworth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sgtratchet/employee-roster-inator/issues"
+  },
+  "homepage": "https://github.com/sgtratchet/employee-roster-inator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.2",
+    "jest": "^26.1.0",
+    "node": "^14.5.0"
+  }
+}
