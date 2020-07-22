@@ -36,8 +36,8 @@ const promptUser = ()=>{
         {
             type: 'list',
             name: 'employeeAdd',
-            message: 'Please select an option, add team member or finish',
-            choices: [Engineer, Intern, finish]
+            message: 'Please select an option.',
+            choices: ['Add Engineer', 'Add Intern', 'Finish']
         }
     ]);
 };
