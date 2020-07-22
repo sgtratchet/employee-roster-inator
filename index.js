@@ -16,7 +16,7 @@ const promptUser = ()=>{
                   console.log('Please enter a name!');
                   return false;
                 }
-              }
+            }
         },
         {
             type: 'input',
