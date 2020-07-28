@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const { default: generateEmptyCoverage } = require('@jest/reporters/build/generateEmptyCoverage');
 
 
 const promptNewTeam = ()=>{
@@ -42,7 +43,26 @@ const promptNewTeam = ()=>{
         .then(teamLeadInfo => {
             managerInfo.projects.push(teamLeadInfo);
             return managerInfo;
-        }
-    )
+        })
 };
 promptNewTeam()
+.then(managerInfo =>{
+    return generateEmptyCoverage(managerInfo);
+})
+
+.then(pageHTML => {
+    return writeFile(pageHTML);
+})
+
+.then(writeFileResponse => {
+    console.log(writeFileResponse);
+    return copyFile();
+})
+
+.then(copyFileResponse => {
+    console.log(copyFileResponse);
+})
+
+.catch(err => {
+    console.log(err);
+});
