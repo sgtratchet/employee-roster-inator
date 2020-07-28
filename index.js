@@ -1,9 +1,7 @@
 const inquirer = require('inquirer');
-const createEngineer = require('./lib/Engineer');
-const createIntern = require('./lib/Intern');
-const createManager = require('./lib/Manager')
 
-const promptUser = ()=>{
+
+const promptNewTeam = ()=>{
     return inquirer.prompt([
         {
             type: 'input',
@@ -33,11 +31,18 @@ const promptUser = ()=>{
             name: 'managerId',
             message: 'What is the team Managers Employee ID?'
         },
-        {
-            type: 'list',
-            name: 'employeeAdd',
-            message: 'Please select an option, add team member or finish',
-            choices: [Engineer, Intern, finish]
+        // {
+        //     type: 'list',
+        //     name: 'employeeAdd',
+        //     message: 'Please select an option, add team member or finish',
+        //     choices: ['add Engineer', 'add Intern', 'finish'],
+           
+        // }
+        ])
+        .then(teamLeadInfo => {
+            managerInfo.projects.push(teamLeadInfo);
+            return managerInfo;
         }
-    ]);
+    )
 };
+promptNewTeam()
