@@ -14,7 +14,7 @@ const promptNewTeam = ()=>{
                   console.log('Please enter a name!');
                   return false;
                 }
-              }
+            }
         },
         {
             type: 'input',
